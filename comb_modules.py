@@ -9,18 +9,13 @@ q = a or !b
 
 from myhdl import *
 
-
 @block
 def exe1(q, a, b):
-    """
-    q = a or !b
-    """
-
     @always_comb
     def comb():
-        pass
+        q.next = a or (not b)
 
-    return instances()
+    return comb
 
 
 @block
@@ -44,7 +39,7 @@ def exe2(q, a, b, c):
 
     @always_comb
     def comb():
-        q.next = a or b
+        q.next = (not b and not c) or (b and c)
 
     return instances()
 
@@ -72,7 +67,7 @@ def exe3(q, a, b, c, d, e):
 
     @always_comb
     def comb():
-        q.next = a
+        q.next = ((a + b) * c)* d * e
 
     return instances()
 
