@@ -86,7 +86,7 @@ def exe4(led, sw):
 
 
 @block
-def exe5(leds, sw):
+def exe5(led, sw):
     """
     led0 é uma copia da chave sw0
     led1 é sw0 & sw1
@@ -97,7 +97,18 @@ def exe5(leds, sw):
 
     @always_comb
     def comb():
-        pass
+        led[0].next = sw[0]
+        led[1].next = sw[0] and sw[1]
+        led[2].next = not (sw[0] and sw[1])
+        led[3].next = sw[0] ^ sw[1]
+        led[4].next  = 1
+        led[5].next = 1
+        led[6].next = 1
+        led[7].next = 1
+        led[8].next = 1
+        led[9].next = 1
+        led[10].next = 1
+
 
     return instances()
 
