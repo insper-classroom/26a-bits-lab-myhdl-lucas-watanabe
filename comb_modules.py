@@ -126,32 +126,32 @@ def sw2hex(hex_pins, sw):
         elif sw[4:0] == 1:
             hex_pins.next = "1111001"
         elif sw[4:0] == 2:
-            hex_pins.next = "1000000"
+            hex_pins.next = "0100100"
         elif sw[4:0] == 3:
-            hex_pins.next = "1000000"
+            hex_pins.next = "0110000"
         elif sw[4:0] == 4:
-            hex_pins.next = "1000000"
+            hex_pins.next = "0011001"
         elif sw[4:0] == 5:
-            hex_pins.next = "1000000"
+            hex_pins.next = "0010010"
         elif sw[4:0] == 6:
-            hex_pins.next = "1000000"
+            hex_pins.next = "0000010"
         elif sw[4:0] == 7:
-            hex_pins.next = "1000000"
+            hex_pins.next = "1111000"
         elif sw[4:0] == 8:
-            hex_pins.next = "1000000"
+            hex_pins.next = "0000000"
         elif sw[4:0] == 9:
-            hex_pins.next = "1000000"
+            hex_pins.next = "0010000"
         elif sw[4:0] == 10:
-            hex_pins.next = "1000000"
+            hex_pins.next = "0001000"
         elif sw[4:0] == 11:
-            hex_pins.next = "1000000"
+            hex_pins.next = "0000011"
         elif sw[4:0] == 12:
-            hex_pins.next = "1000000"
+            hex_pins.next = "1000110"
         elif sw[4:0] == 13:
-            hex_pins.next = "1000000"
+            hex_pins.next = "0100001"
         elif sw[4:0] == 14:
-            hex_pins.next = "1000000"
+            hex_pins.next = "0000110"
         else:
-            hex_pins.next = "1000000"
+            hex_pins.next = "0001110"
 
     return instances()
